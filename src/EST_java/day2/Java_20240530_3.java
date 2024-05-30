@@ -1,3 +1,5 @@
+package EST_java.day2;
+
 public class Java_20240530_3 {
   public static void main(String[] args) {
     char c1 = 'A'; // 문자를 직접 저장

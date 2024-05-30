@@ -1,3 +1,5 @@
+package EST_java.day2;
+
 public class Java_20240530_2 {
   public static void main(String[] args) {
     // 정수 타입

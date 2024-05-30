@@ -1,3 +1,5 @@
+package EST_java.day1;
+
 public class Test {
 
     /**

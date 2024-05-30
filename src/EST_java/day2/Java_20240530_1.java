@@ -1,3 +1,5 @@
+package EST_java.day2;
+
 public class Java_20240530_1 {
   public static void main(String[] args) {
     int a = 1000;
