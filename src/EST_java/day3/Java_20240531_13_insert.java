@@ -6,9 +6,9 @@ public class Java_20240531_13_insert {
     StringBuffer sb = new StringBuffer();
     sb.append("Hello");
     sb.insert(0, "World");
-    sb.insert(0, "World");
-    sb.insert(0, "World");
-    sb.insert(0, "World");
+    sb.insert(6, "2");
+    sb.insert(1, "3");
+    sb.insert(10, "4");
 
     System.out.println(sb);
   }
