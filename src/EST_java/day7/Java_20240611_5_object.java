@@ -17,6 +17,8 @@ public class Java_20240611_5_object {
         park.sayHello();
         park.sayMoney();
 
+
+
         ryu.teaching(student1);
         ryu.cheating(student1);
     }
