@@ -1,4 +1,4 @@
-package EST_java.day10;
+package EST_java.day10.ex3;
 
 public class Java_20240614_error5 {
   public static void main(String[] args) {

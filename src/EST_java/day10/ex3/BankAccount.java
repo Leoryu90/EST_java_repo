@@ -1,4 +1,4 @@
-package EST_java.day10;
+package EST_java.day10.ex3;
 
 public class BankAccount {
     private int balance;
