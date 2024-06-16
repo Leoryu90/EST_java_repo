@@ -1,9 +1,9 @@
-package weeklyQuiz;
+package weeklyQuiz.no1;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import static weeklyQuiz.MyCalculator.*;
+import static weeklyQuiz.no1.MyCalculator.*;
 
 public class WeeklyQuiz1 {
   public static int myRemainder(int a, int b) {

@@ -1,4 +1,4 @@
-package weeklyQuiz;
+package weeklyQuiz.no1;
 
 public class MyCalculator {
     public static int mySum(int a, int b) {
