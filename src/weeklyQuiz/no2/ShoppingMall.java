@@ -14,6 +14,11 @@ public class ShoppingMall {
 
     public void addProduct(String name, int price, int stock){
       Product s = new Product(name, price, stock);
+      if (arrayCount == products.length){
+          Product[] newProducts = new Product[products.length * 2];
+          System.arraycopy(products, 0, newProducts, 0, products.length);
+          products = newProducts;
+      }
       products[arrayCount] = s;
       arrayCount++;
     }
