@@ -1,6 +1,6 @@
 package weeklyQuiz.no2;
 
-public class PremiumShoppingMall extends ConcreteShoppingMall {
+public class PremiumShoppingMall extends AbstractShoppingMall {
     public PremiumShoppingMall(int size) {
         super(size);
     }

@@ -1,8 +1,8 @@
 package weeklyQuiz.no2;
 
-public abstract class ConcreteShoppingMall extends ShoppingMall{
+public abstract class AbstractShoppingMall extends ShoppingMall{
 
-    public ConcreteShoppingMall(int size) {
+    public AbstractShoppingMall(int size) {
         super(size);
     }
 

@@ -37,7 +37,7 @@ public class Main {
 
         while (true) {
           System.out.println("원하는 메뉴를 선택해주세요.");
-          System.out.println("1. 상품 담기 ㅣ 2. 상품 삭제 ㅣ 3. 상품조회 ㅣ 4. 상품구매 가능여부 ㅣ 0. 종료");
+          System.out.println("1. 상품 담기 ㅣ 2. 상품 삭제 ㅣ 3. 상품조회 ㅣ 4. 상품구매 가능여부 ㅣ 5. 장바구니 가격조회 ㅣ 0. 종료");
           select = sc.nextInt();
 
           if (select == 0) {
@@ -64,13 +64,23 @@ public class Main {
               shoppingMall.listPrint();
               break;
             case 4:
-              PremiumShoppingMall shoppingMall2 = new PremiumShoppingMall(shoppingMall.getArrayCount());
-              if (shoppingMall2.checkOrderAvailability() == true){
+              PremiumShoppingMall shoppingMall2 =
+                  new PremiumShoppingMall(shoppingMall.getArrayCount());
+              if (shoppingMall2.checkOrderAvailability() == true) {
                 System.out.println("주문이 가능합니다.");
               } else {
                 System.out.println("주문이 불가능합니다.");
               }
+              break;
+            case 5:
+              System.out.println("가격을 조회합니다.");
+              int sum = 0;
+              Product[] temp = new Product[shoppingMall.getArrayCount()];
 
+              for (int i = 0; i < shoppingMall.getArrayCount(); i++) {
+                temp = shoppingMall.getProducts();
+                sum += temp[i].getPrice();
+              }
               break;
           }
         }

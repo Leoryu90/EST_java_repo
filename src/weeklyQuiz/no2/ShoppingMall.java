@@ -4,6 +4,10 @@ public class ShoppingMall {
     Product[] products;
     int arrayCount = 0;
 
+    public Product[] getProducts() {
+        return products;
+    }
+
     public int getArrayCount() {
         return arrayCount;
     }
