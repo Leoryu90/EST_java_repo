@@ -38,4 +38,8 @@ public class Product {
   public int calculatePrice() {
     return price;
   }
+
+  public String toString() {
+    return "name= " + name + ", price= " + price + ", stock= " + stock;
+  }
 }

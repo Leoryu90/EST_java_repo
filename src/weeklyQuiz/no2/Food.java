@@ -9,6 +9,13 @@ public class Food extends Product{
     LocalDate nowData = LocalDate.now();
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
 
     public Food(String name, int price, int stock, String expiration) {
         super(name, price, stock);
@@ -16,6 +23,7 @@ public class Food extends Product{
         LocalDate date = LocalDate.parse(expirationDate, formatter);
     }
 
+    @Override
     public int calculatePrice() {
         double shortExpiration = 0;
         LocalDate expirationToLocalData = LocalDate.parse(expirationDate, formatter);
@@ -27,6 +35,11 @@ public class Food extends Product{
         } else {
             return 0;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Food [" + super.toString() + ", " + "expirationDate= " + expirationDate + "]";
     }
 }
 
