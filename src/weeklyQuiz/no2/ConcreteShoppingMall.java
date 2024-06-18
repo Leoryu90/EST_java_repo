@@ -6,5 +6,5 @@ public abstract class ConcreteShoppingMall extends ShoppingMall{
         super(size);
     }
 
-    public abstract boolean checkOrderAvailability(int s);
+    public abstract boolean checkOrderAvailability();
 }

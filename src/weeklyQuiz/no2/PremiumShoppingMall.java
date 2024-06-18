@@ -6,9 +6,11 @@ public class PremiumShoppingMall extends ConcreteShoppingMall {
     }
 
     @Override
-    public boolean checkOrderAvailability(int s) {
+    public boolean checkOrderAvailability() {
         for (int i = 0; i < arrayCount; i++) {
-            if (products[i].getStock() < s) {
+            if (products[i].getStock() < 10) {
+                return false;
+            }else if(products[i].getName().isEmpty()){
                 return false;
             }
         }

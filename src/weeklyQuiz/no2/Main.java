@@ -65,7 +65,7 @@ public class Main {
               break;
             case 4:
               PremiumShoppingMall shoppingMall2 = new PremiumShoppingMall(shoppingMall.getArrayCount());
-              if (shoppingMall2.checkOrderAvailability(shoppingMall.getArrayCount()) == true){
+              if (shoppingMall2.checkOrderAvailability() == true){
                 System.out.println("주문이 가능합니다.");
               } else {
                 System.out.println("주문이 불가능합니다.");
