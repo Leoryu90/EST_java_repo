@@ -18,7 +18,7 @@ public class Electronics extends Product{
 
     @Override
     public int calculatePrice() {
-        double premiumPrice = 0;
+        double premiumPrice = super.getPrice();
         if (brand.equals("Apple")){
             premiumPrice = super.getPrice() * 1.2;
         }

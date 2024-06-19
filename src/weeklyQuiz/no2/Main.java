@@ -105,7 +105,7 @@ public class Main {
               int price2 = sc.nextInt();
               int thisStock2 = sc.nextInt();
               String expirationDate = sc.next();
-              stock.addClothing(name2, price2, thisStock2, expirationDate);
+              stock.addFood(name2, price2, thisStock2, expirationDate);
               break;
             case 3:
               System.out.println("name, price, stock, brand 를 순서대로 입력해주세요");
@@ -113,7 +113,7 @@ public class Main {
               int price3 = sc.nextInt();
               int thisStock3 = sc.nextInt();
               String brand = sc.next();
-              stock.addClothing(name3, price3, thisStock3, brand);
+              stock.addElectronics(name3, price3, thisStock3, brand);
               break;
             case 4:
               System.out.println("상품 목록을 조회합니다.");

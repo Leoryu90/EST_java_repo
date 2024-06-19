@@ -18,7 +18,7 @@ public class Clothing extends Product{
 
     @Override
     public int calculatePrice() {
-        double bigSizePrice = 0;
+        double bigSizePrice = super.getPrice();
         if (size.equals("L") || size.equals("XL") || size.equals("XXL")){
             bigSizePrice = super.getPrice() * 1.1;
         }

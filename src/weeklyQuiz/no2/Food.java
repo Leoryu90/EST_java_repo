@@ -25,7 +25,7 @@ public class Food extends Product{
 
     @Override
     public int calculatePrice() {
-        double shortExpiration = 0;
+        double shortExpiration;
         LocalDate expirationToLocalData = LocalDate.parse(expirationDate, formatter);
         if (expirationToLocalData.compareTo(nowData) <= 7) {
             shortExpiration = super.getPrice() * 0.8;
