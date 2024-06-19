@@ -53,4 +53,12 @@ public class ShoppingMall {
         }
     }
 
+    public int sumPrice(){
+        int sum = 0;
+        for (int i = 0; i < arrayCount; i++) {
+            sum += products[i].calculatePrice();
+        }
+        return sum;
+    }
+
 }

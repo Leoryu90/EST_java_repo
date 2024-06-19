@@ -11,6 +11,7 @@ public class Main {
     stock.addFood("Banana", 3000, 2000, "2024-06-24");
     stock.addElectronics("iphone56", 1000000, 30, "Apple");
 
+    //메인 실행 반복문
     while (true) {
       System.out.println("사용자모드를 정수로 입력해주세요.");
       System.out.println("1. 구매자 ㅣ 2. 관리자 ㅣ 0. 종료");
@@ -34,6 +35,7 @@ public class Main {
 
         System.out.println("구매 가능한 목록을 조회합니다.");
         stock.printProducts();
+
 
         while (true) {
           System.out.println("원하는 메뉴를 선택해주세요.");
@@ -66,7 +68,7 @@ public class Main {
             case 4:
               PremiumShoppingMall shoppingMall2 =
                   new PremiumShoppingMall(shoppingMall.getArrayCount());
-              if (shoppingMall2.checkOrderAvailability() == true) {
+              if (shoppingMall2.checkOrderAvailability()) {
                 System.out.println("주문이 가능합니다.");
               } else {
                 System.out.println("주문이 불가능합니다.");
@@ -74,13 +76,7 @@ public class Main {
               break;
             case 5:
               System.out.println("가격을 조회합니다.");
-              int sum = 0;
-              Product[] temp = new Product[shoppingMall.getArrayCount()];
-
-              for (int i = 0; i < shoppingMall.getArrayCount(); i++) {
-                temp = shoppingMall.getProducts();
-                sum += temp[i].getPrice();
-              }
+              System.out.println(shoppingMall.sumPrice());
               break;
           }
         }
