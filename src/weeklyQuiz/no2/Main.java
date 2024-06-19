@@ -9,7 +9,8 @@ public class Main {
 
     stock.addClothing("T-Shirt", 20000, 100, "L");
     stock.addFood("Banana", 3000, 2000, "2024-06-24");
-    stock.addElectronics("iphone56", 1000000, 30, "Apple");
+    stock.addElectronics("iphone56", 1000000, 5, "Apple");
+    stock.addElectronics("galaxy", 1000000, 10, "Samsung");
 
     //메인 실행 반복문
     while (true) {
@@ -31,7 +32,7 @@ public class Main {
           break;
         }
 
-        ShoppingMall shoppingMall = new ShoppingMall(size);
+        ShoppingMall shoppingMall = new PremiumShoppingMall(size);
 
         System.out.println("구매 가능한 목록을 조회합니다.");
         stock.printProducts();
@@ -66,9 +67,7 @@ public class Main {
               shoppingMall.listPrint();
               break;
             case 4:
-              PremiumShoppingMall shoppingMall2 =
-                  new PremiumShoppingMall(shoppingMall.getArrayCount());
-              if (shoppingMall2.checkOrderAvailability()) {
+              if (shoppingMall.checkOrderAvailability()) {
                 System.out.println("주문이 가능합니다.");
               } else {
                 System.out.println("주문이 불가능합니다.");

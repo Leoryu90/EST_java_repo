@@ -1,6 +1,6 @@
 package weeklyQuiz.no2;
 
-public class ShoppingMall {
+public abstract class ShoppingMall {
     Product[] products;
     int arrayCount = 0;
 
@@ -61,4 +61,5 @@ public class ShoppingMall {
         return sum;
     }
 
+    public abstract boolean checkOrderAvailability();
 }
