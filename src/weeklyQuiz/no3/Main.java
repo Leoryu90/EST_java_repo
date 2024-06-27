@@ -9,7 +9,7 @@ public class Main {
         BookStack<Integer> bookStack = new BookStack<>();
         Scanner scanner = new Scanner(System.in);
 
-        // 사용자로부터 도서 정보 입력 받기
+        // 사용자로부터 도서 정보 입력 받기 (BookShelf용)
         System.out.println("도서 정보를 입력하세요 (BookShelf용):");
         System.out.print("제목: ");
         String shelfTitle = scanner.nextLine();
@@ -21,6 +21,7 @@ public class Main {
         Book<String> shelfBook = new Book<>(shelfTitle, shelfAuthor, shelfIdentifier);
         bookShelf.addBook(shelfBook);
 
+        // 사용자로부터 도서 정보 입력 받기(BookStack용)
         System.out.println("\n도서 정보를 입력하세요 (BookStack용):");
         System.out.print("제목: ");
         String stackTitle = scanner.nextLine();
@@ -32,7 +33,7 @@ public class Main {
         Book<Integer> stackBook = new Book<>(stackTitle, stackAuthor, stackIdentifier);
         bookStack.pushBook(stackBook);
 
-        // BookShelf에서 검색 수행
+        // 제목으로 검색 수행
         System.out.print("\n검색할 도서 제목: ");
         String searchTitle = scanner.nextLine();
         List<Book<String>> titleSearchResult = bookShelf.searchByTitle(searchTitle);
@@ -41,10 +42,12 @@ public class Main {
             System.out.println("제목: " + book.getTitle() + ", 저자: " + book.getAuthor() + ", 식별자: " + book.getIdentifier());
         }
 
+        // 저자로 검색 수행
         System.out.print("\n검색할 도서 저자: ");
         String searchAuthor = scanner.nextLine();
         List<Book<String>> authorSearchResult = bookShelf.searchByAuthor(searchAuthor);
         System.out.println("저자 검색 결과:");
+        System.out.println("검색된 도서 수: " + authorSearchResult.size());  // 디버깅용 출력
         for (Book<String> book : authorSearchResult) {
             System.out.println("제목: " + book.getTitle() + ", 저자: " + book.getAuthor() + ", 식별자: " + book.getIdentifier());
         }
