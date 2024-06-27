@@ -2,7 +2,6 @@ package weeklyQuiz.no3;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class BookShelf<T> implements BookManager<T> {
     private List<Book<T>> books;
